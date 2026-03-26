@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang tin tức</title>
+    <meta name="description" content="Trang tin tức mobile-first: bài nổi bật và 5 bài viết mới nhất.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <button class="menu-button" type="button" aria-label="Mở menu">
+                <span class="visually-hidden">Menu</span>
+                <span class="menu-button__icon" aria-hidden="true"></span>
+            </button>
+
+            <a class="brand" href="#" aria-label="Trang chủ">
+                <img class="brand__logo" src="image/logo.png" alt="Logo trang tin tức">
+            </a>
+
+            <nav class="nav" aria-label="Điều hướng chính">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#">Trang chủ</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Công nghệ</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Giáo dục</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Đời sống</a></li>
+                </ul>
+            </nav>
+
+            <form class="search" role="search" aria-label="Tìm kiếm" action="#">
+                <label class="visually-hidden" for="q">Tìm kiếm</label>
+                <input class="search__input" id="q" name="q" type="search" placeholder="Tìm bài viết…" />
+                <button class="search__button" type="submit">Tìm</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="main" id="main">
+        <article class="hero" aria-labelledby="hero-title">
+            <img class="hero__img" src="image/hero.jpg" alt="Ảnh đại diện bài viết nổi bật" loading="eager" decoding="async">
+
+            <div class="container hero__content">
+                <p class="meta">
+                    <time datetime="2026-03-26">26/03/2026</time>
+                    <span aria-hidden="true">•</span>
+                    <span>Tin nổi bật</span>
+                </p>
+                <h1 class="hero__title" id="hero-title">Trang tin tức đa thiết bị</h1>
+                <p class="hero__excerpt">
+                    Tổng hợp tin Công nghệ, Giáo dục và Đời sống — trình bày tối ưu cho mobile-first với ảnh lớn và nội dung ngắn gọn.
+                </p>
+            </div>
+        </article>
+
+        <div class="container content">
+            <section class="latest" aria-labelledby="latest-title">
+                <h2 class="section-title" id="latest-title">Mới nhất</h2>
+
+                <div class="news-list">
+                    <article>
+                        <a class="post-card" href="#">
+                            <img class="post-card__thumb" src="image/thumb-1.jpg" alt="Thumbnail bài viết 1" loading="lazy" decoding="async">
+                            <div>
+                                <p class="post-card__tag">Công nghệ</p>
+                                <p class="post-card__meta"><time datetime="2026-03-26">26/03/2026</time></p>
+                                <h3 class="post-card__title">AI hỗ trợ viết HTML5 semantic: làm đúng ngay từ đầu</h3>
+                                <p class="post-card__excerpt">Chuẩn hoá cấu trúc bằng header/main/article giúp dễ bảo trì, thân thiện SEO và đọc tốt trên mobile.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article>
+                        <a class="post-card" href="#">
+                            <img class="post-card__thumb" src="image/thumb-2.jpg" alt="Thumbnail bài viết 2" loading="lazy" decoding="async">
+                            <div>
+                                <p class="post-card__tag">Giáo dục</p>
+                                <p class="post-card__meta"><time datetime="2026-03-25">25/03/2026</time></p>
+                                <h3 class="post-card__title">Checklist responsive cho bài giảng: dễ hiểu, dễ chấm</h3>
+                                <p class="post-card__excerpt">Dùng breakpoint rõ ràng và font-size hợp lý để sinh viên nhìn là hiểu ngay, không bị “lộn xộn số”.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article>
+                        <a class="post-card" href="#">
+                            <img class="post-card__thumb" src="image/thumb-3.jpg" alt="Thumbnail bài viết 3" loading="lazy" decoding="async">
+                            <div>
+                                <p class="post-card__tag">Đời sống</p>
+                                <p class="post-card__meta"><time datetime="2026-03-24">24/03/2026</time></p>
+                                <h3 class="post-card__title">Thói quen đọc tin trên mobile: ngắn, rõ, nhiều ảnh</h3>
+                                <p class="post-card__excerpt">Tối ưu tiêu đề + trích đoạn để lướt nhanh, đồng thời giữ nhịp đọc bằng hình ảnh và khoảng trắng.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article>
+                        <a class="post-card" href="#">
+                            <img class="post-card__thumb" src="image/thumb-4.jpg" alt="Thumbnail bài viết 4" loading="lazy" decoding="async">
+                            <div>
+                                <p class="post-card__tag">Công nghệ</p>
+                                <p class="post-card__meta"><time datetime="2026-03-23">23/03/2026</time></p>
+                                <h3 class="post-card__title">Grid tin tức: từ 1 cột lên 2–3 cột không vỡ bố cục</h3>
+                                <p class="post-card__excerpt">Tổ chức lưới bằng CSS Grid để danh sách bài viết nhìn gọn, cân đối và không bị tràn ngang.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article>
+                        <a class="post-card" href="#">
+                            <img class="post-card__thumb" src="image/thumb-5.jpg" alt="Thumbnail bài viết 5" loading="lazy" decoding="async">
+                            <div>
+                                <p class="post-card__tag">Giáo dục</p>
+                                <p class="post-card__meta"><time datetime="2026-03-22">22/03/2026</time></p>
+                                <h3 class="post-card__title">Dạy sinh viên tư duy UI/UX: đọc được trước, đẹp tính sau</h3>
+                                <p class="post-card__excerpt">Tập trung vào thứ bậc heading, nhịp spacing, và kiểm tra focus/keyboard để bài làm đạt chuẩn.</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="sidebar" aria-labelledby="sidebar-title">
+                <h2 class="section-title" id="sidebar-title">Tin xem nhiều</h2>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a class="sidebar__link" href="#">
+                            <img class="sidebar__thumb" src="image/thumb-1.jpg" alt="Ảnh minh hoạ" loading="lazy" decoding="async">
+                            <span class="sidebar__title">5 xu hướng UI/UX cho trang tin năm 2026</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a class="sidebar__link" href="#">
+                            <img class="sidebar__thumb" src="image/thumb-4.jpg" alt="Ảnh minh hoạ" loading="lazy" decoding="async">
+                            <span class="sidebar__title">Tối ưu tốc độ tải ảnh: chiến lược đơn giản</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a class="sidebar__link" href="#">
+                            <img class="sidebar__thumb" src="image/thumb-2.jpg" alt="Ảnh minh hoạ" loading="lazy" decoding="async">
+                            <span class="sidebar__title">Thiết kế điều hướng: rõ ràng và ít gây nhiễu</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

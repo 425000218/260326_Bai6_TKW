@@ -1,0 +1,137 @@
+PROMPT LOG — 260326_Bai6_TKW
+Generated at: 2026-03-26 19:30:41
+
+[2026-03-26 19:30:41] #prompt
+hãy đóng vai trò chuyên gia UI/UX, viết html5 và CSS3 theo tư duy moble first cho một trang tin tức. ở chế độ mobile (mặc định), hãy thiết kế một cột duy nhất. Header có logo căn giữa, một ảnh đại diện bài viết lớn, và danh sách 5 bài viết xếp chồng lên nhau, sử dụng các thẻ semantic như <header> <main> <article>
+
+[2026-03-26 19:30:41] #prompt
+Start implementation
+
+[2026-03-26 19:30:41] #prompt
+ok tạo giúp tôi
+
+[2026-03-26 19:30:41] #prompt
+bây giờ hãy thêm một đoạn media query cho màn hình từ 600px trở lên. lúc này, hãy dùng CSS grid để chuyển danh sách bài viết từ 1 cột thành 2 cột đều nhau. Phần header hãy căn logo sang trái và thêm một nút menu bên phải
+
+[2026-03-26 19:30:41] #prompt
+Thành phần
+Navigation
+Hero Section
+News Grid
+Sidebar
+
+Mobile (< 600px)
+Menu "Hamburger" (ẩn)
+1 ảnh lớn chồng lên chữ
+1 cột (dọc)
+Ẩn hoặc đẩy xuống cuối
+
+Tablet (600px - 1024px)
+Menu dạng ngang đơn giản
+Ảnh bên trái, chữ bên phải
+2 cột
+Ẩn
+
+Desktop (> 1024px)
+Menu đầy đủ + Search Bar
+Ảnh nền full, chữ căn giữa
+3 hoặc 4 cột
+Hiện bên phải (Tiêu điểm)
+
+[2026-03-26 19:30:41] #prompt
+Tiếp tục thêm Media Query cho màn hình từ 1024px trở lên. Hãy thay đổi layout thành 3 cột:
+Cột chính (Main) chiếm 70% bên trái chứa lưới tin tức (3 cột nhỏ).
+Cột phụ (Sidebar) chiếm 30% bên phải chứa danh sách 'Tin xem nhiều'.
+Thay đổi menu Hamburger thành một thanh điều hướng ngang đầy đủ các mục: Trang chủ, Công nghệ, Giáo dục, Đời sống
+
+[2026-03-26 19:30:41] #prompt
+font chữ là 16px trên mobile
+
+[2026-03-26 19:30:41] #prompt
+font-size: 0.92 rem nghĩa là gì
+
+[2026-03-26 19:30:41] #prompt
+tại sao dùng font size rem?
+
+[2026-03-26 19:30:41] #prompt
+RESPONSIVE CSS CHEAT SHEET (2026 Edition)
+1. Thẻ Meta bắt buộc (Trong file HTML)
+AI đôi khi quên dòng này, khiến mọi code CSS Responsive đều vô nghĩa trên điện thoại:
+HTML
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+2. Các điểm ngắt (Breakpoints) tiêu chuẩn
+Thay vì viết số lộn xộn, hãy dạy sinh viên dùng các mốc chuẩn này:
+CSS
+/* 1. Mobile First (Mặc định cho điện thoại) */
+body { font-size: 16px; }
+
+/* 2. Tablet (Màn hình từ 768px trở lên) */
+@media (min-width: 768px) {
+    .container { width: 90%; }
+    .sidebar { display: block; }
+}
+
+/* 3. Laptop/Desktop (Màn hình từ 1024px trở lên) */
+@media (min-width: 1024px) {
+    .container { max-width: 1200px; }
+    .nav-menu { display: flex; }
+}
+
+3. Công thức "Vàng" cho Layout linh hoạt
+A. Hình ảnh không bao giờ bị tràn (Responsive Images)
+Dặn sinh viên luôn kiểm tra xem AI có dòng này không:
+CSS
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+B. Grid tự động chia cột (Không cần Media Query)
+Đây là kỹ thuật "thượng thừa" mà sinh viên nên yêu cầu AI sử dụng:
+CSS
+.grid-container {
+    display: grid;
+    /* Tự động chia cột: tối thiểu 250px, tối đa chiếm hết chỗ trống */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+C. Flexbox căn giữa đa thiết bị
+CSS
+.flex-center {
+    display: flex;
+    justify-content: center; /* Căn giữa ngang */
+    align-items: center;     /* Căn giữa dọc */
+    flex-wrap: wrap;        /* Tự xuống dòng trên màn hình nhỏ */
+}
+
+Thành phần
+Chiều rộng
+Đơn vị Font
+Chia cột
+Căn lề
+
+✅ Code Tốt (Nên dùng)
+width: 90%; hoặc max-width: 1200px;
+rem hoặc em (ví dụ: 1.2rem)
+display: grid; hoặc flex;
+margin: 0 auto;
+
+Hãy viết CSS cho Layout này theo phong cách Mobile First, sử dụng đơn vị rem thay vì px. Ưu tiên dùng CSS Grid auto-fit cho danh sách sản phẩm và đảm bảo không sử dụng float hay position tuyệt đối cho bố cục chính
+
+xem các vấn đề này có phát sinh trong code ko, có thì sửa lại nhé
+
+[2026-03-26 19:30:41] #prompt
+tôi thấy hơi sai rồi, quay về bố cục trươc khi promt này nhé
+
+[2026-03-26 19:30:41] #prompt
+tiến hành thêm hình ảnh và nội dung liên quan đến chủ để, hình ảnh phong phú,...
+
+[2026-03-26 19:30:41] #prompt
+hãy note lại các câu promt của tôi đã hỏi vào 1 file .txt trong project này, các lệnh sau cũng tự động note và hết, nhớ kèm tag ngày, thời gian, giờ, phút, giây
+
+Notes:
+- Timestamps above reflect the log creation time (chat platform doesn't provide per-message timestamps here).
+- For future prompts in this chat, I will append new entries to this file with the current timestamp.
